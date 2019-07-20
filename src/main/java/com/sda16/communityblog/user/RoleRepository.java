@@ -3,8 +3,10 @@ package com.sda16.communityblog.user;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
+import java.util.Optional;
 
-    boolean existsByEmail(String email);
+@Repository
+public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
+
+    Optional<RoleEntity> findByRoleName(String roleName);
 }

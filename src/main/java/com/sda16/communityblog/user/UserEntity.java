@@ -1,10 +1,16 @@
 package com.sda16.communityblog.user;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.StringJoiner;
 
 @Entity
+@Getter
+@Setter
 public class UserEntity {
 
     @Id
@@ -19,5 +25,22 @@ public class UserEntity {
 
     private String password;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role")
+    private Set<RoleEntity> roles;
 
+    public void addRole(RoleEntity roleEntity){
+        if (roles == null) {
+            roles = new HashSet<>();
+        }
+        roles.add(roleEntity);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", UserEntity.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("email='" + email + "'")
+                .toString();
+    }
 }
