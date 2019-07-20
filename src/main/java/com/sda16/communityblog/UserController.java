@@ -51,7 +51,7 @@ public class UserController {
             bindingResult.rejectValue("email", "email-duplicate", "This e-mail has previously been registered");
             return "signUpForm";
         }
-        redirectAttributes.addFlashAttribute("msg", "Дякуємо за реєстрацію!");
+        redirectAttributes.addFlashAttribute("msg", "Thank you for registering!");
         return "redirect:/";
     }
 }
