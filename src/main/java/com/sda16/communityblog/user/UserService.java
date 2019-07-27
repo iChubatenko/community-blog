@@ -3,6 +3,7 @@ package com.sda16.communityblog.user;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 @Service
@@ -41,5 +42,13 @@ public class UserService {
         userRepository.save(user);
 
 
+    }
+
+    public UserEntity updateUser(EditUserForm editUserForm) {
+        return null;
+    }
+
+    @PostConstruct
+    void init() {
     }
 }

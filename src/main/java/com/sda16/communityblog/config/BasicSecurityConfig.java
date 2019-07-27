@@ -27,7 +27,6 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").hasAnyRole(ADMIN.getRoleName(), USER.getRoleName())
                 .antMatchers("/admin/**").hasRole(ADMIN.getRoleName())
-                //.hasAuthority("ROLE_ADMIN")
                 .antMatchers("/post/**").hasAnyRole(ADMIN.getRoleName(), USER.getRoleName())
                 .anyRequest().permitAll()
                 .and()
@@ -38,7 +37,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .usernameParameter("email")
                 .passwordParameter("password")
-                .loginProcessingUrl("/loginBySpring")
+                .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/")
                 .failureUrl("/login?status=error")
                 .and()
@@ -52,7 +51,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("admin@gmail.com")
-                .password(passwordEncoder.encode("admin"))
+                .password(passwordEncoder.encode("admin228"))
                 .roles(ADMIN.getRoleName());
 
         auth.jdbcAuthentication()

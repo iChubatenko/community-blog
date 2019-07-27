@@ -8,6 +8,6 @@ public class MainController {
 
     @GetMapping("/")
     public String showHomePage() {
-        return "signUpForm";
+        return "homePage";
     }
 }

@@ -27,13 +27,13 @@ public class UserController {
     }
 
     @GetMapping("/signup")
-    public String showRegisterForm(Model model) {
+    public String showSignUpForm(Model model) {
         model.addAttribute("signUpForm", new SignUpForm());
         return "signUpForm";
     }
 
     @PostMapping("/signup")
-    public String handleRegisterForm(
+    public String handleSignUpForm(
             @ModelAttribute @Valid SignUpForm signUpForm,
             BindingResult bindingResult,
             Model model,
@@ -53,5 +53,10 @@ public class UserController {
         }
         redirectAttributes.addFlashAttribute("msg", "Thank you for registering!");
         return "redirect:/";
+    }
+
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "logInForm";
     }
 }
