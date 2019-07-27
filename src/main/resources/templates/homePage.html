@@ -24,7 +24,7 @@ Logged user: <span sec:authentication="name">Ihor</span>
 
 <ol>
     <li th:if="${@permissionService.isUser()}">
-        <a>Access link for user</a>
+        <a>My tweets</a>
     </li>
     <li th:if="${@permissionService.isAdmin()}">
         <a th:href="@{/admin/users}">Edit users</a>
