@@ -9,12 +9,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class TweetEntity {
 
@@ -23,17 +23,29 @@ public class TweetEntity {
     private Long tweetId;
     @Column
     private String message;
-    @DateTimeFormat
     private LocalDate date;
     @Column(length = 150, unique = true)
     private String email;
 
-//    @OneToMany
-//    @JoinTable(name = "user_entity")
-//    private Set<UserEntity> userEntities;
-//
-//
-//    public TweetEntity(Long valueOf, String anyPost, LocalDate now, String anyEmail) {
-//
-//    }
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private UserEntity user;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "TWEET_ID")
+    private Collection<TweetCommentEntity> comments;
+
+    public TweetEntity(Long tweetId, String anyMassage, LocalDate date, String anyEmail) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "TweetEntity{" +
+                "tweetId=" + tweetId +
+                ", message='" + message + '\'' +
+                ", date=" + date +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

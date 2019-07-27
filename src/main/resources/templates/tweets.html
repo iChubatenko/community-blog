@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Community blog</title>
+</head>
+<body>
+<form method="get" th:action="@{/tweets}"></form>
+<h1 th:text="${tweet.message}">Tweet name</h1>
+<p th:text="${tweet}"></p>
+Write your message: <input type="text" th:field="*{tweet}" th:errorClass="error">
+<span th:errors="*{tweet}"></span>
+<input type="submit" value="Tweet">
+<br>
+</body>
+</html>

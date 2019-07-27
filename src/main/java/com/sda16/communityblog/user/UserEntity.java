@@ -1,9 +1,11 @@
 package com.sda16.communityblog.user;
 
+import com.sda16.communityblog.tweet.TweetEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.StringJoiner;
@@ -28,6 +30,9 @@ public class UserEntity {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role")
     private Set<RoleEntity> roles;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Collection<TweetEntity> tweets;
 
     public void addRole(RoleEntity roleEntity){
         if (roles == null) {
