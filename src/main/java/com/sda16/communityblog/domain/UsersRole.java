@@ -1,4 +1,4 @@
-package com.sda16.communityblog.config;
+package com.sda16.communityblog.domain;
 
 public enum UsersRole {
     ADMIN("ADMIN", "ROLE_ADMIN"),

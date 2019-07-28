@@ -1,5 +1,6 @@
-package com.sda16.communityblog.user;
+package com.sda16.communityblog.repository;
 
+import com.sda16.communityblog.domain.RoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

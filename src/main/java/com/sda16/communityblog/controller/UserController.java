@@ -1,8 +1,8 @@
-package com.sda16.communityblog;
+package com.sda16.communityblog.controller;
 
-import com.sda16.communityblog.user.EmailAlreadyExistsException;
-import com.sda16.communityblog.user.SignUpForm;
-import com.sda16.communityblog.user.UserService;
+import com.sda16.communityblog.exceptions.EmailAlreadyExistsException;
+import com.sda16.communityblog.domain.SignUpForm;
+import com.sda16.communityblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

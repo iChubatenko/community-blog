@@ -1,5 +1,9 @@
-package com.sda16.communityblog.user;
+package com.sda16.communityblog.service;
 
+import com.sda16.communityblog.exceptions.EmailAlreadyExistsException;
+import com.sda16.communityblog.repository.RoleRepository;
+import com.sda16.communityblog.repository.UserRepository;
+import com.sda16.communityblog.domain.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

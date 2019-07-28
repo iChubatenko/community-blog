@@ -1,6 +1,6 @@
-package com.sda16.communityblog.user;
+package com.sda16.communityblog.service;
 
-import com.sda16.communityblog.config.UsersRole;
+import com.sda16.communityblog.domain.UsersRole;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -8,8 +8,8 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Arrays;
 
-import static com.sda16.communityblog.config.UsersRole.ADMIN;
-import static com.sda16.communityblog.config.UsersRole.USER;
+import static com.sda16.communityblog.domain.UsersRole.ADMIN;
+import static com.sda16.communityblog.domain.UsersRole.USER;
 
 @Service
 @SessionScope

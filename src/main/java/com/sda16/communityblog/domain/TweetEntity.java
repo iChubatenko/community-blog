@@ -1,16 +1,12 @@
-package com.sda16.communityblog.tweet;
+package com.sda16.communityblog.domain;
 
-import com.sda16.communityblog.user.UserEntity;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Collection;
-import java.util.Set;
 
 @Entity
 @Getter

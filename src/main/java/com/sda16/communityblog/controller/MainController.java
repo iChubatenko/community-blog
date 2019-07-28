@@ -1,4 +1,4 @@
-package com.sda16.communityblog;
+package com.sda16.communityblog.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

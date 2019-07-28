@@ -1,13 +1,14 @@
-package com.sda16.communityblog.tweet;
+package com.sda16.communityblog.service;
 
-import com.sda16.communityblog.user.UserRepository;
+import com.sda16.communityblog.domain.TweetEntity;
+import com.sda16.communityblog.repository.TweetRepository;
+import com.sda16.communityblog.repository.UserRepository;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import javax.transaction.TransactionScoped;
 
 @Service
 @Getter

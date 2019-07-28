@@ -1,4 +1,4 @@
-package com.sda16.communityblog.user;
+package com.sda16.communityblog.exceptions;
 
 public class EmailAlreadyExistsException extends Exception {
 

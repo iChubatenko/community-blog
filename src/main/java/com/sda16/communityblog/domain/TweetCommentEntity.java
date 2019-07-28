@@ -1,6 +1,8 @@
-package com.sda16.communityblog.tweet;
+package com.sda16.communityblog.domain;
 
-import com.sda16.communityblog.user.UserEntity;
+import com.fasterxml.jackson.annotation.JsonView;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.time.LocalDate;

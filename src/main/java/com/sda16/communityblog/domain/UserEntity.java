@@ -1,10 +1,11 @@
-package com.sda16.communityblog.user;
+package com.sda16.communityblog.domain;
 
-import com.sda16.communityblog.tweet.TweetEntity;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonView;
+import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;

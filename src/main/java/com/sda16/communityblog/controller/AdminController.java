@@ -1,8 +1,8 @@
-package com.sda16.communityblog.admin;
+package com.sda16.communityblog.controller;
 
-import com.sda16.communityblog.user.EditUserForm;
-import com.sda16.communityblog.user.UserEntity;
-import com.sda16.communityblog.user.UserRepository;
+import com.sda16.communityblog.domain.EditUserForm;
+import com.sda16.communityblog.domain.UserEntity;
+import com.sda16.communityblog.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

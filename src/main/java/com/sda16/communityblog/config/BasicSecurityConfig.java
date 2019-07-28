@@ -9,8 +9,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.sql.DataSource;
 
-import static com.sda16.communityblog.config.UsersRole.ADMIN;
-import static com.sda16.communityblog.config.UsersRole.USER;
+import static com.sda16.communityblog.domain.UsersRole.ADMIN;
+import static com.sda16.communityblog.domain.UsersRole.USER;
 
 @Configuration
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {

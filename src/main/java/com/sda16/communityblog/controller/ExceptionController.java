@@ -1,6 +1,6 @@
-package com.sda16.communityblog.config;
+package com.sda16.communityblog.controller;
 
-import org.springframework.stereotype.Controller;
+import com.sda16.communityblog.exceptions.ExceptionMessage;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

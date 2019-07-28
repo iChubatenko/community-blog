@@ -1,9 +1,7 @@
-package com.sda16.communityblog;
+package com.sda16.communityblog.controller;
 
-import com.sda16.communityblog.tweet.TweetEntity;
-import com.sda16.communityblog.tweet.TweetService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import com.sda16.communityblog.domain.TweetEntity;
+import com.sda16.communityblog.service.TweetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

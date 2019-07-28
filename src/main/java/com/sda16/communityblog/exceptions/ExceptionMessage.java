@@ -1,4 +1,4 @@
-package com.sda16.communityblog.config;
+package com.sda16.communityblog.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
